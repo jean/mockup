@@ -315,6 +315,20 @@ define([
       tpl.remove();
     });
 
+    it('positionToggleWithInput is false', function() {
+      var $el = $(''+
+          '<div class="pat-livesearch"'+
+              'data-pat-livesearch="url:/search.json;'+
+              'positionToggleWithInput:false">'+
+            '<input type="text" class="pat-livesearch-input" placeholder="Search" />'+
+            '<div class="pat-livesearch-container">'+
+              '<div class="pat-livesearch-results">'+
+              '</div>'+
+            '</div>'+
+          '</div>').appendTo('body');
+      var pattern = $('.pat-livesearch').patternLivesearch().data('patternLivesearch');
+    });
+
   });
 
 });
